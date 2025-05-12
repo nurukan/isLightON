@@ -1,4 +1,5 @@
 'use strict';
+{
 
 //   <ul id="ul__box">
 //         <!-- 関数を使用 -->
@@ -26,6 +27,10 @@ const switch2 = document.getElementById('switch2');
 const box3 = document.getElementById('box3');
 const light3 = document.getElementById('light3');
 const switch3 = document.getElementById('switch3');
+
+const box4 = document.getElementById('box4');
+const light4 = document.getElementById('light4');
+const switch4 = document.getElementById('switch4');
 
 // 関数を使用
 // ボタンを押して、実行すると「真・偽を判断して」処理する
@@ -77,3 +82,21 @@ switch3.addEventListener('click',()=>{
 
 
 
+// 
+let LightOn4 = true;
+function isLightOn4 (){
+    if(LightOn4 === true){
+        LightOn4 = false;
+        light4.style.backgroundColor = 'rgb(46, 45, 45)';
+        console.log('4の部屋の電気が付いていたから、消したよ！');
+    }else{
+        LightOn4 = true;
+        light4.style.backgroundColor = 'rgb(255, 255, 142)';
+        console.log('4の部屋の電気が消えていたから、つけたよ！');
+    }
+}
+switch4.addEventListener('click', isLightOn4);
+
+
+
+}
